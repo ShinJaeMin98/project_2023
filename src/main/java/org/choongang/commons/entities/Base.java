@@ -1,4 +1,4 @@
-package org.choongang.entities;
+package org.choongang.commons.entities;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.EntityListeners;
@@ -9,11 +9,11 @@ import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @MappedSuperclass
-@Getter @Setter
+@Getter
+@Setter
 @EntityListeners(AuditingEntityListener.class)
 public abstract class Base {
     @CreatedDate
