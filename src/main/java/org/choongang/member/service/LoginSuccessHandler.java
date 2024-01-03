@@ -23,7 +23,7 @@ public class LoginSuccessHandler implements AuthenticationSuccessHandler {
         /* 회원 정보 조회 편의 구현 */
         MemberInfo memberInfo = (MemberInfo) authentication.getPrincipal();
         Member member = memberInfo.getMember();
-        session.setAttribute("memeber", member);
+        session.setAttribute("member", member);
 
         String redirectURL = request.getParameter("redirectURL");
         redirectURL = StringUtils.hasText(redirectURL) ? redirectURL : "/";
