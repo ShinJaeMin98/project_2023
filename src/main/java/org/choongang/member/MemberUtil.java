@@ -28,5 +28,4 @@ public class MemberUtil {
         session.removeAttribute("Global_error");
     }
 
-
 }
