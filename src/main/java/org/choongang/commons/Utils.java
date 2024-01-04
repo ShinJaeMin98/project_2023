@@ -72,4 +72,16 @@ public class Utils {    // 현재 서버가 모바일인지 아닌지 체크
         return getMessage(code, null);
     }
 
+    /**
+     * \n 또는 \r\n -> <br>
+     * @param str
+     * @return
+     */
+    public String nl2br(String str) {
+        str = str.replaceAll("\\n", "<br>")
+                .replaceAll("\\r", "");
+
+        return str;
+    }
+
 }
