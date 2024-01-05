@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
-public class ConfigSaveService {
+public class  ConfigSaveService {
     private final ConfigsRepository repository;
 
     public void save(String code, Object data) {
