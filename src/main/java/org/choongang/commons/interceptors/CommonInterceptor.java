@@ -63,6 +63,7 @@ public class CommonInterceptor implements HandlerInterceptor {
 
         boolean isIncluded = Arrays.stream(excludes).anyMatch(s -> URL.contains(s));
         if (isIncluded) {
+
             return;
         }
 
