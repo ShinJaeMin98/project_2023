@@ -25,7 +25,7 @@ class ProjectApplicationTests {
 
 		Authorities authorities = new Authorities();
 		authorities.setMember(member);
-		authorities.setAuthority(Authority.MANAGER);
+		authorities.setAuthority(Authority.ADMIN);
 
 		authoritiesRepository.saveAndFlush(authorities);
 	}

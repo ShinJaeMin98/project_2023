@@ -26,11 +26,11 @@ public class LoginFailureHandler implements AuthenticationFailureHandler {
         session.setAttribute("username", username);
 
         if (!StringUtils.hasText(username)) {
-            session.setAttribute("NotBlank_username", Utils.getMessages("NotBlank.userId"));
+            session.setAttribute("NotBlank_username", Utils.getMessage("NotBlank.userId"));
         }
 
         if (!StringUtils.hasText(password)) {
-            session.setAttribute("NotBlank_password", Utils.getMessages("NotBlank.password"));
+            session.setAttribute("NotBlank_password", Utils.getMessage("NotBlank.password"));
         }
 
         // 아이디, 비번이 있지만 실패한 경우
