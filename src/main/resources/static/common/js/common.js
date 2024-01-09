@@ -33,15 +33,31 @@ commonLib.ajaxLoad = function(method, url, params, responseType) {
         };
 
         xhr.onabort = function(err) {
-            reject(err);
+            reject(err);    // 성공시 응답 데이터
         };
 
         xhr.onerror = function(err) {
-            reject(err);
+            reject(err);    // 중단시
         };
 
         xhr.ontimeout = function(err) {
-            reject(err);
+            reject(err);    // 요청 또는 응답시 오류 발생
         };
+    });
+};
+
+/**
+*   위지웍 에디터 로드
+*
+*/
+commonLib.loadEditor = function (id, height) {
+    if (!id) {
+        return;
+    }
+    height = height || 450;
+
+    // ClassicEditor
+    return ClassicEditor.create(document.getElementById(id), {
+        height
     });
 }

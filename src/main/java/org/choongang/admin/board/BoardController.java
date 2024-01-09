@@ -85,7 +85,6 @@ public class BoardController implements ExceptionProcessor {
         String pageTitle = "게시판 목록";
         mode = StringUtils.hasText(mode) ? mode : "list";
 
-
         if (mode.equals("add")) {
             pageTitle = "게시판 등록";
 
@@ -99,8 +98,11 @@ public class BoardController implements ExceptionProcessor {
 
         List<String> addCommonScript = new ArrayList<>();
         List<String> addScript = new ArrayList<>();
-        if(mode.equals("add") || mode.equals("edit")) { // 게시판 등록 또는 수정
+
+        if (mode.equals("add") || mode.equals("edit")) { // 게시판 등록 또는 수정
             addCommonScript.add("ckeditor5/ckeditor");
+            addCommonScript.add("fileManager");
+
             addScript.add("board/form");
         }
 
