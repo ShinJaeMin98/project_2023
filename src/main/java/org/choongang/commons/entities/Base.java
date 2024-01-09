@@ -18,7 +18,7 @@ import java.time.LocalDateTime;
 public abstract class Base {
     @CreatedDate
     @Column(updatable = false)  // 수정 불가
-    private LocalDateTime createAt;
+    private LocalDateTime createdAt;
 
     @LastModifiedDate
     @Column(insertable = false) // 삽입 불가
