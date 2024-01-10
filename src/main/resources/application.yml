@@ -2,6 +2,8 @@ server:
   port: 3000
 
 spring:
+  profiles:
+    active: dev
   mail:
     host: smtp.gmail.com # SMTP 서버 호스트
     port: 587 # SMTP 서버 포트
